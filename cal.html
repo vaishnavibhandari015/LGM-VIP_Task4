@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY CALCULATOR</title>
+    <style>
+        #container {
+            width: 1000px;
+            height: 500px;
+            margin: 20px, auto;
+            
+        }
+
+        #mycalci {
+            width: 320px;
+            height: 670px;
+            background-color: black;
+            margin: 0 auto;
+            top: 30px;
+            position: relative;
+            border-radius: 5px;
+            
+        }
+
+        #keys {
+            height: 400px;
+        }
+
+        .outputs {
+
+            width: 312px;
+            background-color: black;
+            color: white;
+            padding-top: 200px;
+            font-size: 35px
+        }
+
+        .operator,
+        .number,
+        .empty {
+            width: 50px;
+            height: 50px;
+            margin: 15px;
+            float: left;
+            border-radius: 50%;
+            border-width: 0;
+            font-weight: bold;
+            font-size: 15px;
+            color: black;
+        }
+
+        .empty {
+            background-color: rgb(3, 0, 0);
+        }
+
+        .number,
+        .operator {
+            cursor: pointer;
+        }
+
+        .operator:active,
+        .number:active {
+            font-size: 13px;
+        }
+
+        .operator:focus,
+        .number:focus,
+        .empty:focus {
+            outline: 0;
+        }
+
+        button:nth-child(4) {
+            font-size: 20px;
+            background-color: #f08080;
+
+        }
+
+        button:nth-child(8) {
+            font-size: 20px;
+            background-color: #f08080;
+        }
+
+        button:nth-child(12) {
+            font-size: 20px;
+            background-color: #f08080;
+        }
+
+        button:nth-child(16) {
+            font-size: 20px;
+            background-color: #f08080;
+        }
+
+        button:nth-child(20) {
+            font-size: 20px;
+            background-color: #f08080;
+        }
+    </style>
+  
+</head>
+
+
+
+<center>
+
+    <div id="container">
+        <div id="mycalci">
+            <div>
+                <input type="text" id="output" class=outputs>
+            </div>
+            <div id="keys">
+                <button class="operator" id="clear" value='C' onclick="output.value = ''">C</button>
+                <button class="operator" id="backspace" value='CE'
+                    onclick="output.value = output.value.slice(0, output.value.length -1)">CE</button>
+                <button class="operator" id="%" onclick="output.value += '%'">%</button>
+                <button class="operator" id="/" onclick="output.value += '/'">&#247;</button>
+
+                <button class="number" id="7" onclick="output.value += '7'">7</button>
+                <button class="number" id="8" onclick="output.value += '8'">8</button>
+                <button class="number" id="9" onclick="output.value += '9'">9</button>
+                <button class="operator" id="*" onclick="output.value += '*'">&times;</button>
+
+                <button class="number" id="4" onclick="output.value += '4'">4</button>
+                <button class="number" id="5" onclick="output.value += '5'">5</button>
+                <button class="number" id="6" onclick="output.value += '6'">6</button>
+                <button class="operator" id="-" onclick="output.value += '-'">-</button>
+
+                <button class="number" id="1" onclick="output.value += '1'">1</button>
+                <button class="number" id="2" onclick="output.value += '2'">2</button>
+                <button class="number" id="3" onclick="output.value += '3'">3</button>
+                <button class="operator" id="+" onclick="output.value += '+'">+</button>
+                <button class="empty" id="empty"></button>
+                <button class="number" id="0" onclick="output.value += '0'">0</button>
+                <button class="empty" id="empty"></button>
+                <button class="operator" id="=" onclick="output.value = eval(output.value) ">=</button>
+
+            </div>
+        </div>
+    </div>
+</center>
+<script>
+    document.body.style.backgroundColor = "grey";
+</script>
+</body>
+
+</html>
